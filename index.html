@@ -78,6 +78,10 @@
   .arrow{color:#6E837B;font-size:.85rem}
   section.block{padding:54px 0;border-top:1px solid var(--line)}
   .block h2{font-family:var(--display);font-weight:600;font-size:clamp(1.55rem,3.2vw,2.1rem);letter-spacing:-.01em;margin:13px 0 26px;max-width:30ch}
+  .block.centered{text-align:center}
+  .block.centered h2{margin-left:auto;margin-right:auto}
+  .block.centered .item{text-align:left}
+  .block.centered .why-wrap{margin-left:auto;margin-right:auto;text-align:left}
   .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   .item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;transition:transform .2s,box-shadow .2s}
   .item:hover{transform:translateY(-4px);box-shadow:0 16px 30px -22px rgba(16,48,42,.4)}
@@ -244,7 +248,7 @@
 </div>
 
 <div class="wrap">
-  <section class="block" id="get">
+  <section class="block centered" id="get">
     <span class="eyebrow reveal">What you get back</span>
     <h2 class="reveal d1">An honest read on your page, the kind I'd give a paying client.</h2>
     <div class="three">
