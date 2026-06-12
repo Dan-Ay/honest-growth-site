@@ -1,0 +1,313 @@
+<!--
+  HONEST GROWTH, Free Landing-Page Review  (LIVE, MailerLite connected)
+
+  The form below is YOUR real MailerLite embed (form 189999936049251727), untouched,
+  so the button works and submissions save. I added brand styling on top.
+
+  WHERE YOUR ENTRIES LAND IN MAILERLITE:
+    • First name      → Name field
+    • Email           → Email field
+    • Page to review  → "Company" field   (you reused this one, that's fine)
+    • Note            → "Last name" field  (you reused this one, that's fine)
+  So when you read a submission, the page URL shows under Company and the note under
+  Last name. Totally fine, just know where to look. (You can rename those two fields
+  in MailerLite → Subscribers → Fields if you want tidier labels later.)
+
+  HOST IT FREE: drag this file onto app.netlify.com/drop (or Vercel / GitHub Pages),
+  then submit once to test, your entry appears in MailerLite → Subscribers
+  (under "Unconfirmed" first if you use double opt-in).
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Honest Growth | Free Landing-Page Review</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{--paper:#F7F5EF;--ink:#1A1A1A;--deep:#10302A;--emerald:#18886A;--amber:#E8A33D;--line:#E4DFD4;--muted:#5E625F;--bad:#C0563E;--display:'Space Grotesk',sans-serif;--body:'Inter',sans-serif;--mono:'JetBrains Mono',monospace}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--body);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  a{color:inherit;text-decoration:none}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--emerald);display:inline-flex;align-items:center;gap:.55rem}
+  .eyebrow::before{content:"";width:24px;height:2px;background:var(--emerald)}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+  header{position:sticky;top:0;z-index:50;background:rgba(247,245,239,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .wm{font-family:var(--display);font-weight:700;font-size:1.18rem;color:var(--deep);letter-spacing:-.01em}
+  .brand .wm span{color:var(--emerald)}
+  .nav-links{display:flex;gap:26px;font-size:.92rem;color:var(--muted)}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-cta{font-family:var(--display);font-weight:600;font-size:.88rem;color:#fff;background:var(--deep);padding:9px 16px;border-radius:9px;transition:background .18s,transform .12s}
+  .nav-cta:hover{background:var(--emerald);transform:translateY(-1px)}
+  @media(max-width:760px){.nav-links{display:none}}
+  .hero{padding:62px 0 52px}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:start}
+  h1{font-family:var(--display);font-weight:700;font-size:clamp(2.1rem,4.8vw,3.2rem);line-height:1.06;letter-spacing:-.02em;margin:18px 0 18px}
+  h1 .mark{position:relative;white-space:nowrap}
+  h1 .mark::after{content:"";position:absolute;left:0;bottom:.06em;height:.32em;width:100%;background:rgba(232,163,61,.55);z-index:-1;transform:scaleX(0);transform-origin:left;animation:underline .8s .5s forwards cubic-bezier(.2,.7,.2,1)}
+  @keyframes underline{to{transform:scaleX(1)}}
+  .lede{font-size:1.1rem;color:var(--muted);max-width:38ch}
+  .chips{margin-top:22px;display:flex;flex-wrap:wrap;gap:8px 16px;font-family:var(--mono);font-size:.74rem}
+  .chips span{display:inline-flex;align-items:center;gap:.4rem}
+  .chips span::before{content:"✓";color:var(--emerald);font-weight:700}
+  .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 24px;box-shadow:0 20px 46px -28px rgba(16,48,42,.42)}
+  .card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;padding-bottom:14px;border-bottom:1px dashed var(--line)}
+  .card-top .label{font-family:var(--mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+  .status{font-family:var(--mono);font-size:.64rem;letter-spacing:.05em;color:var(--emerald);border:1px solid var(--emerald);border-radius:999px;padding:3px 9px;text-transform:uppercase}
+  .status .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--emerald);margin-right:5px;animation:pulse 1.8s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+  .reality-band{background:var(--deep);color:#EDEDE7;padding:30px 0}
+  .reality{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;justify-content:space-between}
+  .reality-title{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+  .rc-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+  .rc-label{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#9FB3AC;margin-right:4px}
+  .chip{font-family:var(--mono);font-size:.74rem;padding:5px 11px;border-radius:7px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14)}
+  .chip.bad{color:#F0A693;border-color:rgba(192,86,62,.5)}
+  .chip.good{color:#7FD8B6;border-color:rgba(24,136,106,.6)}
+  .arrow{color:#6E837B;font-size:.85rem}
+  section.block{padding:54px 0;border-top:1px solid var(--line)}
+  .block h2{font-family:var(--display);font-weight:600;font-size:clamp(1.55rem,3.2vw,2.1rem);letter-spacing:-.01em;margin:13px 0 26px;max-width:24ch}
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px;transition:transform .2s,box-shadow .2s}
+  .item:hover{transform:translateY(-4px);box-shadow:0 16px 30px -22px rgba(16,48,42,.4)}
+  .item .num{font-family:var(--mono);font-size:.78rem;color:var(--amber);font-weight:500}
+  .item h3{font-family:var(--display);font-weight:600;font-size:1.1rem;margin:8px 0 6px}
+  .item p{font-size:.94rem;color:var(--muted)}
+  .proof{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;background:var(--deep);color:#EDEDE7;border-radius:18px;padding:34px 32px}
+  .proof .stat{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,7vw,3.8rem);color:#fff;line-height:1}
+  .proof .stat small{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;color:var(--amber);margin-top:8px;font-weight:500}
+  .proof p{font-size:1.02rem;max-width:48ch;color:#D7DAD5}
+  .proof p .hl{color:#fff;font-weight:600}
+  .why-wrap{display:flex;gap:30px;align-items:flex-start;max-width:780px}
+  .why-photo{width:160px;height:160px;border-radius:18px;object-fit:cover;flex-shrink:0;border:1px solid var(--line);box-shadow:0 16px 34px -20px rgba(16,48,42,.45)}
+  .why{max-width:60ch}
+  .why p{margin-bottom:13px;font-size:1.04rem}
+  .why strong{color:var(--deep)}
+  footer{padding:36px 0 52px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
+  footer .fbrand{display:flex;align-items:center;gap:9px;font-family:var(--display);font-weight:700;color:var(--deep)}
+  footer .fbrand span{color:var(--emerald)}
+  footer .social{display:flex;gap:18px;align-items:center}
+  footer .social a{color:var(--muted);display:inline-flex;transition:color .18s,transform .12s}
+  footer .social a:hover{color:var(--emerald);transform:translateY(-2px)}
+  footer .social svg{width:20px;height:20px;fill:currentColor}
+  @media (max-width:820px){.hero-grid{grid-template-columns:1fr;gap:32px}.lede{max-width:none}.three{grid-template-columns:1fr}.proof{grid-template-columns:1fr;gap:14px}.reality{flex-direction:column;align-items:flex-start}}
+  @media (max-width:560px){footer{flex-direction:column;align-items:flex-start;gap:16px}.nav-cta{padding:8px 13px;font-size:.82rem}.brand .wm{font-size:1.05rem}.hero{padding:44px 0 40px}section.block{padding:42px 0}.why-wrap{flex-direction:column;gap:18px}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}h1 .mark::after{transform:scaleX(1)}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top" aria-label="Honest Growth home">
+      <svg width="34" height="34" viewBox="0 0 240 240" aria-hidden="true"><rect width="240" height="240" rx="56" fill="#10302A"/><rect x="84" y="138" width="22" height="40" rx="11" fill="#F1EEE6"/><rect x="114" y="112" width="22" height="66" rx="11" fill="#F1EEE6"/><rect x="144" y="80" width="22" height="98" rx="11" fill="#18886A"/><circle cx="155" cy="66" r="11" fill="#E8A33D"/></svg>
+      <span class="wm">Honest<span>Growth</span></span>
+    </a>
+    <nav class="nav-links"><a href="#get">What you get</a><a href="#proof">Proof</a><a href="#why">Why me</a></nav>
+    <a class="nav-cta" href="#review">Get your free review</a>
+  </div>
+</header>
+
+<div id="top"></div>
+
+<div class="wrap">
+  <section class="hero" id="review">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow reveal">Free landing-page review</span>
+        <h1 class="reveal d1">If your landing page wouldn't convince <span class="mark">you</span>, it won't convince your customers.</h1>
+        <p class="lede reveal d2">Before you spend a dollar driving traffic, get an honest, no-fluff review of the page that traffic actually lands on, and exactly what to fix.</p>
+        <div class="chips reveal d3"><span>Real human review</span><span>No sales pitch</span><span>Specific fixes</span></div>
+      </div>
+
+      <div class="card reveal d2">
+        <div class="card-top">
+          <span class="label">Page intake</span>
+          <span class="status"><span class="dot"></span>Open this week</span>
+        </div>
+
+        <!-- ============ YOUR REAL MAILERLITE FORM (untouched) ============ -->
+        <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1781173");</style>
+        <style type="text/css">
+          .ml-form-embedSubmitLoad{display:inline-block;width:20px;height:20px}
+          .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+          .ml-form-embedSubmitLoad:after{content:" ";display:block;width:11px;height:11px;margin:1px;border-radius:50%;border:4px solid #fff;border-color:#fff #fff #fff transparent;animation:ml-form-embedSubmitLoad 1.2s linear infinite}
+          @keyframes ml-form-embedSubmitLoad{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+          #mlb2-42498004.ml-form-embedContainer{box-sizing:border-box;display:table;margin:0 auto;position:static;width:100%!important}
+          #mlb2-42498004.ml-form-embedContainer h4,#mlb2-42498004.ml-form-embedContainer p,#mlb2-42498004.ml-form-embedContainer span,#mlb2-42498004.ml-form-embedContainer button{text-transform:none!important;letter-spacing:normal!important}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper{background-color:#f6f6f6;border-width:0;border-color:transparent;border-radius:4px;border-style:solid;box-sizing:border-box;display:inline-block!important;margin:0;padding:0;position:relative}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper.embedForm{max-width:400px;width:100%}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-align-center{text-align:center}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,#mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody{padding:20px 20px 0 20px}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,#mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent{text-align:left;margin:0 0 20px 0}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,#mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:30px;font-weight:400;margin:0 0 10px 0;text-align:left;word-break:break-word}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,#mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:#000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px;font-weight:400;line-height:20px;margin:0 0 10px 0;text-align:left}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group{text-align:left!important}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label{margin-bottom:5px;color:#333;font-size:14px;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-weight:bold;display:inline-block;line-height:20px}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form{margin:0;width:100%}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent{margin:0 0 20px 0;width:100%}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 10px 0;width:100%}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item{margin:0}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input{background-color:#fff!important;color:#333!important;border-color:#ccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;height:auto;line-height:21px!important;margin:0;padding:10px 10px!important;width:100%!important;box-sizing:border-box!important;max-width:100%!important}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea{background-color:#fff!important;color:#333!important;border-color:#ccc;border-radius:4px!important;border-style:solid!important;border-width:1px!important;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px!important;height:auto;line-height:21px!important;margin:0;padding:10px 10px!important;width:100%!important;box-sizing:border-box!important;max-width:100%!important}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:0 0 20px 0;float:left;width:100%}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#000!important;border:none!important;border-radius:4px!important;box-shadow:none!important;color:#fff!important;cursor:pointer;font-family:'Open Sans',Arial,Helvetica,sans-serif!important;font-size:14px!important;font-weight:700!important;line-height:21px!important;height:auto;padding:10px!important;width:100%!important;box-sizing:border-box!important}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading{display:none}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#333!important}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions{text-align:left;float:left;width:100%}
+          #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p{color:#000;font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:12px;line-height:22px;margin:0 0 10px 0}
+          .ml-error input,.ml-error textarea{border-color:red!important}
+        </style>
+        <div id="mlb2-42498004" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-42498004">
+          <div class="ml-form-align-center">
+            <div class="ml-form-embedWrapper embedForm">
+              <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+                <div class="ml-form-embedContent" style="margin-bottom:0px;"></div>
+                <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2424985/forms/189999936049251727/subscribe" data-code="" method="post" target="_blank">
+                  <div class="ml-form-formContent">
+                    <div class="ml-form-fieldRow">
+                      <div class="ml-field-group ml-field-name ml-validate-required">
+                        <label>First Name</label>
+                        <input aria-label="name" aria-required="true" type="text" class="form-control" name="fields[name]" placeholder="Your first name" autocomplete="given-name">
+                      </div>
+                    </div>
+                    <div class="ml-form-fieldRow">
+                      <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                        <label>Email</label>
+                        <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="you@email.com" autocomplete="email">
+                      </div>
+                    </div>
+                    <div class="ml-form-fieldRow">
+                      <div class="ml-field-group ml-field-company">
+                        <label>The page you want reviewed</label>
+                        <input aria-label="company" type="text" class="form-control" name="fields[company]" placeholder="https://yourwebsite.com/your-page" autocomplete="">
+                      </div>
+                    </div>
+                    <div class="ml-form-fieldRow ml-last-item">
+                      <div class="ml-field-group ml-field-last_name">
+                        <label>Anything I should focus on? (optional)</label>
+                        <textarea class="form-control" name="fields[last_name]" aria-label="last_name" maxlength="1024" placeholder="e.g. my conversions are low, or I'm about to drive traffic to it"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="ml-form-embedPermissions">
+                    <div class="ml-form-embedPermissionsContent default privacy-policy">
+                      <p style="text-align:center;">Free reviews are limited each week, first come, first served</p>
+                    </div>
+                  </div>
+                  <input type="hidden" name="ml-submit" value="1">
+                  <div class="ml-form-embedSubmit">
+                    <button type="submit" class="primary">Send my page for review</button>
+                    <button disabled="disabled" style="display:none;" type="button" class="loading"><div class="ml-form-embedSubmitLoad"></div><span class="sr-only">Loading...</span></button>
+                  </div>
+                  <input type="hidden" name="anticsrf" value="true">
+                </form>
+              </div>
+              <div class="ml-form-successBody row-success" style="display:none">
+                <div class="ml-form-successContent">
+                  <h4>Got it !</h4>
+                  <p>Your page is in the queue. I'll email you back.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          function ml_webform_success_42498004(){var $=ml_jQuery||jQuery;$('.ml-subscribe-form-42498004 .row-success').show();$('.ml-subscribe-form-42498004 .row-form').hide();}
+        </script>
+        <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+        <script>fetch("https://assets.mailerlite.com/jsonp/2424985/forms/189999936049251727/takel");</script>
+        <!-- ============ /YOUR REAL MAILERLITE FORM ============ -->
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="reality-band">
+  <div class="wrap reality reveal">
+    <span class="reality-title">Conversion reality check</span>
+    <div class="rc-row"><span class="rc-label">Before</span><span class="chip">Traffic</span><span class="arrow">→</span><span class="chip bad">Weak page</span><span class="arrow">→</span><span class="chip bad">Leaves</span></div>
+    <div class="rc-row"><span class="rc-label">After</span><span class="chip">Traffic</span><span class="arrow">→</span><span class="chip good">Better page</span><span class="arrow">→</span><span class="chip good">Lead</span></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="block" id="get">
+    <span class="eyebrow reveal">What you get back</span>
+    <h2 class="reveal d1">An honest read on your page, the kind I'd give a paying client.</h2>
+    <div class="three">
+      <div class="item reveal d1"><span class="num">01</span><h3>A straight verdict</h3><p>What's working and what isn't, no sugar-coating. You'll know where you stand in the first two lines.</p></div>
+      <div class="item reveal d2"><span class="num">02</span><h3>Your biggest conversion leaks</h3><p>The exact spots where visitors hesitate, get confused, or leave, the ones quietly costing you sales.</p></div>
+      <div class="item reveal d3"><span class="num">03</span><h3>Fixes you can make this week</h3><p>Concrete, prioritized changes you can act on now, not vague theory, just what to do next.</p></div>
+    </div>
+  </section>
+
+  <section class="block" id="proof">
+    <div class="proof reveal">
+      <div class="stat">60%<small>Local service client</small></div>
+      <p>For one local service client, roughly <span class="hl">60% of customers reported seeing his published coverage before they ever checked his website</span>, but it was the page we rebuilt behind that traffic that turned them into booked jobs. Traffic gets people there. The page is what converts them.</p>
+    </div>
+  </section>
+
+  <section class="block" id="why">
+    <span class="eyebrow reveal">Why me</span>
+    <h2 class="reveal d1">I build the pages and funnels behind real campaigns.</h2>
+    <div class="why-wrap reveal d1">
+      <img class="why-photo" src="Ayodeji_Daniel.png" alt="Daniel Ayodeji, landing-page and funnel specialist" width="160" height="160" />
+      <div class="why">
+        <p>I'm <strong>Daniel Ayodeji</strong>. I help small businesses and marketers turn traffic into customers, writing the landing pages, funnels, and follow-up systems behind real campaigns, not theory decks.</p>
+        <p>I'll only tell you what I'd actually do if you were paying me. If your page is already strong, I'll say so. If it's leaking, I'll show you exactly where, and what to do about it.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div class="wrap">
+  <footer class="reveal">
+    <div class="fbrand"><svg width="26" height="26" viewBox="0 0 240 240" aria-hidden="true"><rect width="240" height="240" rx="56" fill="#10302A"/><rect x="84" y="138" width="22" height="40" rx="11" fill="#F1EEE6"/><rect x="114" y="112" width="22" height="66" rx="11" fill="#F1EEE6"/><rect x="144" y="80" width="22" height="98" rx="11" fill="#18886A"/><circle cx="155" cy="66" r="11" fill="#E8A33D"/></svg>Honest<span>Growth</span></div>
+    <div class="social">
+      <a href="https://medium.com/@dj4real65" target="_blank" rel="noopener" aria-label="Medium"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42s-3.39-2.88-3.39-6.42 1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75s-1.19-2.58-1.19-5.75.53-5.75 1.19-5.75S24 8.83 24 12z"/></svg></a>
+      <a href="https://x.com/honestgrowthco" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="[[YOUR_PINTEREST_URL]]" target="_blank" rel="noopener" aria-label="Pinterest"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.137.893 2.739a.36.36 0 0 1 .083.345c-.091.378-.293 1.193-.333 1.36-.052.219-.173.265-.4.159-1.492-.694-2.424-2.875-2.424-4.627 0-3.769 2.737-7.229 7.892-7.229 4.144 0 7.365 2.953 7.365 6.899 0 4.117-2.595 7.431-6.199 7.431-1.211 0-2.348-.629-2.738-1.373l-.744 2.838c-.269 1.036-.996 2.334-1.483 3.124C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12C24 5.372 18.627 0 12 0z"/></svg></a>
+    </div>
+    <div>A review is feedback, not a guarantee of results. What you do with it is up to you.</div>
+  </footer>
+</div>
+
+<script>
+  const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+
+<!-- ===== Brand restyle of the MailerLite form (loads last so it wins) ===== -->
+<style type="text/css">
+  #mlb2-42498004.ml-form-embedContainer{display:block!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper{background-color:transparent!important;width:100%!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper.embedForm{max-width:none!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody{padding:0!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent{margin:0 0 6px 0!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow{margin:0 0 14px 0!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label{color:#1A1A1A!important;font-family:'JetBrains Mono',monospace!important;font-size:.68rem!important;letter-spacing:.04em!important;text-transform:uppercase!important;font-weight:500!important;margin-bottom:6px!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input,
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea{background-color:#F7F5EF!important;color:#1A1A1A!important;border-color:#E4DFD4!important;border-radius:10px!important;font-family:'Inter',sans-serif!important;font-size:1rem!important;padding:11px 13px!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea{min-height:64px!important;resize:vertical!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:focus,
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea:focus{border-color:#18886A!important;box-shadow:0 0 0 3px rgba(24,136,106,.15)!important;outline:none!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit{margin:6px 0 0 0!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button{background-color:#10302A!important;border-radius:11px!important;font-family:'Space Grotesk',sans-serif!important;font-size:1rem!important;font-weight:600!important;padding:14px!important;transition:background .18s,transform .14s!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover{background-color:#18886A!important;transform:translateY(-2px)!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsContent.privacy-policy p{color:#5E625F!important;font-family:'Inter',sans-serif!important;font-size:.78rem!important;line-height:1.5!important;text-align:center!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4{color:#18886A!important;font-family:'Space Grotesk',sans-serif!important;font-size:1.3rem!important;text-align:center!important}
+  #mlb2-42498004.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p{color:#5E625F!important;font-family:'Inter',sans-serif!important;text-align:center!important}
+</style>
+</body>
+</html>
